@@ -56,10 +56,17 @@ func add (num1 int, num2 int){
     sum := num1 + num2;
     fmt.Println(sum);
 }
-func main () {
-    a := 5;
-    b := 10;
 
-    add(a, b);  // 15
-    add(5, 5); // 10
+func multiply (num1 int, num2 int) int {
+    multi := num1 * num2;
+    return multi;
+}
+func main () {
+     a := 5;
+     b := 10;
+
+    result := multiply(a, b);  // 15
+    
+
+    fmt.Println(result);
 }
