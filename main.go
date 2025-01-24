@@ -39,7 +39,7 @@ func main2() {
     }
 }
 
-func main() {
+func main3() {
     y := 10;
 
     if (y > 10 && y < 20) {
@@ -49,4 +49,17 @@ func main() {
     } else {
         fmt.Println("Nothing");
     }
+}
+
+// Function
+func add (num1 int, num2 int){
+    sum := num1 + num2;
+    fmt.Println(sum);
+}
+func main () {
+    a := 5;
+    b := 10;
+
+    add(a, b);  // 15
+    add(5, 5); // 10
 }
