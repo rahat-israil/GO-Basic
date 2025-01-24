@@ -61,12 +61,31 @@ func multiply (num1 int, num2 int) int {
     multi := num1 * num2;
     return multi;
 }
-func main () {
-     a := 5;
-     b := 10;
+// func main () {
+//      a := 5;
+//      b := 10;
 
-    result := multiply(a, b);  // 15
+//     result := multiply(a, b);  // 15
     
 
-    fmt.Println(result);
+//     fmt.Println(result);
+// }
+
+
+func getNumbers (num1 int, num2 int) (int, int){
+    sum := num1 + num2;
+
+    divide := num1 / num2;
+
+    return sum, divide;
+}
+
+func main (){
+    a := 20
+    b := 10
+
+    p, q := getNumbers (a, b);
+
+    fmt.Println(p)
+    fmt.Println(q)
 }
