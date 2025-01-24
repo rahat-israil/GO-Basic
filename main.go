@@ -80,7 +80,7 @@ func getNumbers (num1 int, num2 int) (int, int){
     return sum, divide;
 }
 
-func main (){
+func main4 (){
     a := 20
     b := 10
 
@@ -88,4 +88,41 @@ func main (){
 
     fmt.Println(p)
     fmt.Println(q)
+}
+
+
+func main (){
+    // Print welcome message
+    fmt.Println("Welcome to the Calculator System");
+
+    // Input Fields
+    var name string;
+    fmt.Print("Please Enter your name: ");
+    fmt.Scanln(&name);
+
+    fmt.Println("Here you can calculate the 2 number Summation, Subtraction, Multiplication and Division");
+
+    var num1 int;
+    var num2 int;
+
+    fmt.Print("Please Enter thr first number: ")
+    fmt.Scanln(&num1);
+
+    fmt.Print("Please Enter the Second Number: ");
+    fmt.Scanln(&num2);
+
+    // Operations
+    sum := num1 + num2;
+    sub := num1 - num2;
+    multi := num1 * num2;
+    divide := num1 / num2;
+
+    // Final Print
+    fmt.Println("Hello!", name);
+    fmt.Println("The sum of the number is:", sum);
+    fmt.Println("The Subtrsct of the number is:", sub);
+    fmt.Println("The Multiplication of the number is:", multi);
+    fmt.Println("The Division of the number is:", divide);
+
+    fmt.Println("Thank you for using the Calculator System");
 }
