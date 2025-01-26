@@ -91,7 +91,7 @@ func main4 (){
 }
 
 
-func main (){
+func main5 (){
     // Print welcome message
     fmt.Println("Welcome to the Calculator System");
 
@@ -125,4 +125,60 @@ func main (){
     fmt.Println("The Division of the number is:", divide);
 
     fmt.Println("Thank you for using the Calculator System");
+}
+
+// Organized way to implement the Function
+
+func printWelcomeMessage (){
+    fmt.Println("Welcome to the Calculator System");
+}
+func getUserName () string{
+    var name string;
+    fmt.Print("Please Enter your name: ");
+    fmt.Scanln(&name);
+
+    return name;
+}
+func getTwoNumbers () (int, int){
+    fmt.Println("Here you can calculate the 2 number Summation, Subtraction, Multiplication and Division");
+    var num1 int;
+    var num2 int;
+
+    fmt.Print("Please Enter thr first number: ")
+    fmt.Scanln(&num1);
+
+    fmt.Print("Please Enter the Second Number: ");
+    fmt.Scanln(&num2);
+
+    return num1, num2;
+}
+func Operations(num1 int, num2 int) (int, int, int, int) {
+    sum := num1 + num2;
+    sub := num1 - num2;
+    multi := num1 * num2;
+    divide := num1 / num2;
+
+    return sum, sub, multi, divide;
+}
+func DisplayResult(name string, sum int, sub int, multi int, divide int){
+    fmt.Println("Hello!", name);
+    fmt.Println("The sum of the number is:", sum);
+    fmt.Println("The Subtrsct of the number is:", sub);
+    fmt.Println("The Multiplication of the number is:", multi);
+    fmt.Println("The Division of the number is:", divide);
+}
+func printGoodByeMessage(){
+    fmt.Println("Thank you for using the Calculator System");
+    fmt.Println("Good Bye!");
+}
+
+func main(){
+    printWelcomeMessage();
+    name := getUserName();
+    num1, num2 := getTwoNumbers();
+
+    sum, sub, multi, divide := Operations(num1, num2);
+
+    DisplayResult(name, sum, sub, multi, divide);
+    printGoodByeMessage();
 }
